@@ -41,3 +41,7 @@ comando sql:
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 ```
+
+A string de conexão com o banco deve ser colocada na propriedade Conexao da classe Db da biblioteca de classes Empresa.Db.
+
+Após isso é preciso apenas entrar na pasta de um dos projetos e rodar o comando `dotnet run`.
