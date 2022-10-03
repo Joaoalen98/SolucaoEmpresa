@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Models;
+﻿using System.Data.SqlClient;
+using Empresa.Models;
 
 namespace Empresa.Db
 {
     public class ClienteDb
     {
-        public void Incluir (Cliente cliente)
+        public void Incluir(Cliente cliente)
         {
             var cn = new SqlConnection(Db.Conexao);
             var cmd = new SqlCommand("INSERT INTO Cliente (Nome, Email, Telefone)" +
@@ -18,13 +13,13 @@ namespace Empresa.Db
             cmd.Parameters.AddWithValue("@Nome", cliente.Nome);
             cmd.Parameters.AddWithValue("@Email", cliente.Email);
             cmd.Parameters.AddWithValue("@Telefone", cliente.Telefone);
-            
+
             cn.Open();
             cmd.ExecuteNonQuery();
             cn.Close();
         }
 
-        public void Alterar (Cliente cliente)
+        public void Alterar(Cliente cliente)
         {
             var cn = new SqlConnection(Db.Conexao);
             var cmd = new SqlCommand("UPDATE Cliente SET Nome=@Nome, Email=@Email, Telefone=@Telefone " +
@@ -39,7 +34,7 @@ namespace Empresa.Db
             cn.Close();
         }
 
-        public void Excluir (int Id)
+        public void Excluir(int Id)
         {
             var cn = new SqlConnection(Db.Conexao);
             var cmd = new SqlCommand("DELETE Cliente WHERE Id=@Id", cn);
@@ -50,7 +45,7 @@ namespace Empresa.Db
             cn.Close();
         }
 
-        public List<Cliente> Listar ()
+        public List<Cliente> Listar()
         {
             var cn = new SqlConnection(Db.Conexao);
             var cmd = new SqlCommand("SELECT Id, Nome, Email, Telefone FROM Cliente", cn);
@@ -73,7 +68,7 @@ namespace Empresa.Db
             return list;
         }
 
-        public Cliente ObterPorId (int id)
+        public Cliente ObterPorId(int id)
         {
             var cn = new SqlConnection(Db.Conexao);
             var cmd = new SqlCommand("SELECT Id, Nome, Email, Telefone FROM Cliente WHERE Id=@Id", cn);

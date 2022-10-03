@@ -1,7 +1,6 @@
 ﻿using Empresa.Db;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Models;
+using Empresa.Models;
 
 namespace Empresa.UI.Web.Controllers
 {
@@ -11,7 +10,7 @@ namespace Empresa.UI.Web.Controllers
         public ActionResult Index()
         {
             var db = new ClienteDb();
-            List<global::Models.Cliente> lista = db.Listar();
+            List<Cliente> lista = db.Listar();
 
             return View(lista);
         }

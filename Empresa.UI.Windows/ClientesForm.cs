@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Empresa.Db;
-using Models;
+using Empresa.Models;
 
 namespace Empresa.UI.Windows
 {

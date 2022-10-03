@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empresa.Models", "Models\Empresa.Models.csproj", "{E163C9B6-3F96-4664-B345-185364D90578}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empresa.Models", "Empresa.Models\Empresa.Models.csproj", "{E163C9B6-3F96-4664-B345-185364D90578}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empresa.UI.Windows", "WindowsApp\Empresa.UI.Windows.csproj", "{1B16E81F-C58C-4441-B607-2F41E0E47F3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empresa.UI.Windows", "Empresa.UI.Windows\Empresa.UI.Windows.csproj", "{1B16E81F-C58C-4441-B607-2F41E0E47F3A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empresa.Db", "Empresa.Db\Empresa.Db.csproj", "{9F0AB870-11F3-4A09-96DF-85BD99BB4DB6}"
 EndProject
